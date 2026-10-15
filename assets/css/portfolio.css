@@ -1,0 +1,150 @@
+/* Portfolio additions on top of the Forty template (main.css).
+
+   Colour palette ("Glowing horizon")
+   Amber   #FFB343
+   Cyan    #42EAFF
+   Blue    #4272FF
+   Orange  #FF7E42
+   Neutral background #F7F6F3, text #3D3B38, headings #1F1E1C
+*/
+
+/* Tile colours: change the class on a tile's <article> in index.html to recolour it */
+.tiles article.tile-amber:before { background-color: #ffb343; }
+.tiles article.tile-cyan:before { background-color: #42eaff; }
+.tiles article.tile-blue:before { background-color: #4272ff; }
+.tiles article.tile-orange:before { background-color: #ff7e42; }
+
+/* White text on blue tiles and blue page banners (reads better than dark text on this blue) */
+.tiles article.tile-blue h3,
+.tiles article.tile-blue h3 a,
+.tiles article.tile-blue p,
+#banner.style3 h1,
+#banner.style3 p {
+	color: #ffffff;
+}
+
+.tiles article.tile-blue header.major > :first-child:after,
+#banner.style3 header.major > :first-child:after {
+	background-color: #ffffff;
+}
+
+/* Logo hover on blue pages: keep the name visible */
+#header.alt.style3 .logo:hover strong,
+#header.alt.style3 .logo:hover span {
+	color: #ffffff;
+}
+
+/* Palette stripe along the bottom of the homepage banner */
+#banner.major:before {
+	background: linear-gradient(90deg, #ffb343 0 25%, #42eaff 25% 50%, #4272ff 50% 75%, #ff7e42 75% 100%);
+	bottom: 0;
+	content: "";
+	height: 6px;
+	left: 0;
+	position: absolute;
+	width: 100%;
+	z-index: 3;
+}
+
+/* Placeholders still to fill in. Search your files for "todo" to find them all. */
+.todo {
+	border: 1px dashed #ff7e42;
+	border-radius: 4px;
+	color: #b0461a;
+	font-style: italic;
+	padding: 0.05em 0.4em;
+}
+
+.todo-block {
+	background: #fff8f3;
+	border: 2px dashed #ff7e42;
+	border-radius: 6px;
+	margin: 0 0 2em 0;
+	padding: 1.25em 1.5em 0.25em 1.5em;
+}
+
+.todo-block .todo-label {
+	color: #b0461a;
+	font-size: 0.8em;
+	font-weight: 600;
+	letter-spacing: 0.2em;
+	margin-bottom: 0.5em;
+	text-transform: uppercase;
+}
+
+/* Artefact cards */
+.artefact {
+	background: #ffffff;
+	border: solid 1px rgba(31, 30, 28, 0.12);
+	border-radius: 6px;
+	margin: 0 0 2em 0;
+	padding: 1.75em 2em 0.5em 2em;
+}
+
+.artefact h3 {
+	margin-bottom: 0.25em;
+}
+
+.artefact .artefact-meta {
+	font-size: 0.85em;
+	margin-bottom: 1em;
+	opacity: 0.7;
+}
+
+/* Jump links and previous / next buttons wrap on narrow screens */
+.jump-links,
+.pager {
+	flex-wrap: wrap;
+}
+
+.jump-links li,
+.pager li {
+	padding-bottom: 1em;
+}
+
+#page-nav > .inner {
+	padding-bottom: 1em;
+}
+
+/* Long module names on the previous / next buttons wrap instead of overflowing */
+.pager .button {
+	height: auto;
+	line-height: 1.5;
+	padding-bottom: 0.9em;
+	padding-top: 0.9em;
+	white-space: normal;
+}
+
+/* Keep chosen line breaks in page banners on phones */
+#banner > .inner .content p br.keep {
+	display: inline;
+}
+
+/* Tighter heading above the module tiles */
+#main > section.level-heading > .inner {
+	padding-bottom: 0;
+}
+
+/* Skills matrix rating columns */
+.skills-matrix th:nth-child(2),
+.skills-matrix th:nth-child(3),
+.skills-matrix td:nth-child(2),
+.skills-matrix td:nth-child(3) {
+	text-align: center;
+	width: 5.5em;
+}
+
+.note {
+	font-size: 0.85em;
+	opacity: 0.7;
+}
+
+.references li {
+	margin-bottom: 0.5em;
+}
+
+@media screen and (max-width: 736px) {
+	.artefact {
+		padding: 1.5em 1.25em 0.25em 1.25em;
+	}
+}
